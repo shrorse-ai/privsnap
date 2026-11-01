@@ -1,0 +1,4 @@
+app/build/
+artifacts/private/
+*.jks
+*.keystore
