@@ -1,6 +1,6 @@
-# PrivSnap
+# <img src="assets/icon.png" width="38" height="38" align="top" alt="PrivSnap"> PrivSnap
 
-A 48 KB Android utility to strip EXIF/GPS metadata and blur or redact sensitive text in screenshots before sharing.
+A 46 KB Android utility to strip EXIF/GPS metadata and blur or redact sensitive text in screenshots before sharing.
 
 No `INTERNET` permission, no storage permissions, and no third-party dependencies.
 

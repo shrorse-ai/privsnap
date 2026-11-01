@@ -1,5 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
-  <rect x="6" y="6" width="108" height="108" rx="26" fill="#0F172A"/>
-  <path d="M60 22 L90 34 L90 57 C90 78 76.5 92.5 60 99 C43.5 92.5 30 78 30 57 L30 34 Z" fill="#10B981"/>
-  <path d="M53.5 71.5 L42 60 L47.2 54.8 L53.5 61.1 L72.8 41.8 L78 47 Z" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#111C33"/>
+      <stop offset="100%" stop-color="#062C28"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect x="24" y="24" width="464" height="464" rx="108" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="190" fill="#38BDF8" fill-opacity="0.06"/>
+
+  <!-- Left Half: Crisp Photo Frame with Sun & Mountain -->
+  <path d="M132 116 H252 V396 H132 A32 32 0 0 1 100 364 V148 A32 32 0 0 1 132 116 Z" fill="url(#frame)"/>
+  <path d="M138 136 H246 V376 H138 A18 18 0 0 1 120 358 V154 A18 18 0 0 1 138 136 Z" fill="#0B1120"/>
+  <circle cx="176" cy="196" r="26" fill="#38BDF8"/>
+  <path d="M120 330 L176 260 L220 306 L246 280 V376 H138 A18 18 0 0 1 120 358 Z" fill="#10B981"/>
+
+  <!-- Center Vertical Laser Scrubber Line -->
+  <rect x="248" y="92" width="16" height="328" rx="8" fill="#FFFFFF"/>
+
+  <!-- Right Half: Dissolving Frosted / Mosaic Pixel Blocks -->
+  <rect x="282" y="116" width="56" height="56" rx="12" fill="#34D399"/>
+  <rect x="354" y="116" width="52" height="56" rx="12" fill="#38BDF8" fill-opacity="0.65"/>
+
+  <rect x="282" y="190" width="56" height="56" rx="12" fill="#10B981" fill-opacity="0.85"/>
+  <rect x="354" y="190" width="52" height="56" rx="12" fill="#38BDF8" fill-opacity="0.40"/>
+
+  <rect x="282" y="264" width="56" height="56" rx="12" fill="#10B981"/>
+  <rect x="354" y="264" width="52" height="56" rx="12" fill="#34D399" fill-opacity="0.70"/>
+
+  <rect x="282" y="338" width="56" height="58" rx="12" fill="#38BDF8" fill-opacity="0.55"/>
+  <rect x="354" y="338" width="52" height="58" rx="12" fill="#10B981" fill-opacity="0.30"/>
 </svg>

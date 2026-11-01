@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Outer Photo Card Frame (Left half crisp, Right half dissolving into mosaic blocks) -->
+    <path
+        android:pathData="M31,27L55,27L55,81L31,81A6,6 0,0 1,25 75L25,33A6,6 0,0 1,31 27Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="25"
+                android:startY="27"
+                android:endX="55"
+                android:endY="81"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#FF38BDF8" />
+                <item android:offset="1.0" android:color="#FF10B981" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Inner dark cutout on left half of photo frame -->
+    <path
+        android:fillColor="#FF0F172A"
+        android:pathData="M32,31L54,31L54,77L32,77A3,3 0,0 1,29 74L29,34A3,3 0,0 1,32 31Z" />
+
+    <!-- Sun circle inside photo frame (left side) -->
+    <path
+        android:fillColor="#FF38BDF8"
+        android:pathData="M39,43m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0" />
+
+    <!-- Mountain landscape silhouette inside left half -->
+    <path
+        android:fillColor="#FF10B981"
+        android:pathData="M29,68L39,55L48,64L54,58L54,77L32,77A3,3 0,0 1,29 74Z" />
+
+    <!-- Center vertical split divider (Scrubber laser line) -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M53.5,23L56.5,23L56.5,85L53.5,85Z" />
+
+    <!-- Right half: Frosted / Pixel Mosaic Tiles representing scrubbed metadata & redaction -->
+    <!-- Row 1 tiles -->
+    <path
+        android:fillColor="#FF34D399"
+        android:pathData="M60,27L69,27A2,2 0,0 1,71 29L71,36A2,2 0,0 1,69 38L60,38A2,2 0,0 1,58 36L58,29A2,2 0,0 1,60 27Z" />
+    <path
+        android:fillColor="#9938BDF8"
+        android:pathData="M75,27L82,27A2,2 0,0 1,84 29L84,36A2,2 0,0 1,82 38L75,38A2,2 0,0 1,73 36L73,29A2,2 0,0 1,75 27Z" />
+
+    <!-- Row 2 tiles -->
+    <path
+        android:fillColor="#CC10B981"
+        android:pathData="M60,41L69,41A2,2 0,0 1,71 43L71,50A2,2 0,0 1,69 52L60,52A2,2 0,0 1,58 50L58,43A2,2 0,0 1,60 41Z" />
+    <path
+        android:fillColor="#6638BDF8"
+        android:pathData="M75,41L82,41A2,2 0,0 1,84 43L84,50A2,2 0,0 1,82 52L75,52A2,2 0,0 1,73 50L73,43A2,2 0,0 1,75 41Z" />
+
+    <!-- Row 3 tiles -->
+    <path
+        android:fillColor="#FF10B981"
+        android:pathData="M60,55L69,55A2,2 0,0 1,71 57L71,64A2,2 0,0 1,69 66L60,66A2,2 0,0 1,58 64L58,57A2,2 0,0 1,60 55Z" />
+    <path
+        android:fillColor="#AA34D399"
+        android:pathData="M75,55L82,55A2,2 0,0 1,84 57L84,64A2,2 0,0 1,82 66L75,66A2,2 0,0 1,73 64L73,57A2,2 0,0 1,75 55Z" />
+
+    <!-- Row 4 tiles -->
+    <path
+        android:fillColor="#8838BDF8"
+        android:pathData="M60,69L69,69A2,2 0,0 1,71 71L71,79A2,2 0,0 1,69 81L60,81A2,2 0,0 1,58 79L58,71A2,2 0,0 1,60 69Z" />
+    <path
+        android:fillColor="#4410B981"
+        android:pathData="M75,69L82,69A2,2 0,0 1,84 71L84,79A2,2 0,0 1,82 81L75,81A2,2 0,0 1,73 79L73,71A2,2 0,0 1,75 69Z" />
+</vector>
