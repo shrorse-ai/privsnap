@@ -93,33 +93,33 @@ public final class ExifInspector {
         }
 
         if (r.hasGps && !r.gpsDisplay.isEmpty()) {
-            r.findings.add(new Finding("📍 GPS 精确经纬度定位", "📍 Exact GPS Coordinates", r.gpsDisplay, true));
+            r.findings.add(new Finding("GPS 经纬度", "GPS Coordinates", r.gpsDisplay, true));
         }
         if (!r.deviceDisplay.isEmpty()) {
-            r.findings.add(new Finding("📱 拍摄设备品牌与型号", "📱 Camera Make & Model", r.deviceDisplay, true));
+            r.findings.add(new Finding("拍摄设备", "Device Model", r.deviceDisplay, true));
         }
         if (!r.dateTimeDisplay.isEmpty()) {
-            r.findings.add(new Finding("🕒 原始拍摄时间戳", "🕒 Original Capture Timestamp", r.dateTimeDisplay, true));
+            r.findings.add(new Finding("拍摄时间", "Capture Time", r.dateTimeDisplay, true));
         }
         if (!r.lensSerialDisplay.isEmpty()) {
-            r.findings.add(new Finding("🔍 镜头参数与机身序列号", "🔍 Lens & Device Serial", r.lensSerialDisplay, true));
+            r.findings.add(new Finding("镜头与序列号", "Lens & Serial", r.lensSerialDisplay, true));
         }
         if (!r.softwareDisplay.isEmpty()) {
-            r.findings.add(new Finding("⚙️ 系统固件与处理软件", "⚙️ OS Firmware / Software", r.softwareDisplay, false));
+            r.findings.add(new Finding("系统版本", "Software", r.softwareDisplay, false));
         }
         if (r.metadataSegmentsCount > 0) {
             r.findings.add(new Finding(
-                    "📦 隐藏元数据数据块",
-                    "📦 Hidden Metadata Segments",
+                    "元数据区块",
+                    "Metadata Blocks",
                     I18n.tr(
-                            r.metadataSegmentsCount + " 个区块 · 共 " + r.metadataTotalBytes + " 字节",
-                            r.metadataSegmentsCount + " segments · " + r.metadataTotalBytes + " bytes"),
+                            r.metadataSegmentsCount + " 个区块 (" + r.metadataTotalBytes + " B)",
+                            r.metadataSegmentsCount + " blocks (" + r.metadataTotalBytes + " B)"),
                     false));
         }
         if (r.fileNameLeaks) {
             r.findings.add(new Finding(
-                    "🏷️ 文件名暴露时间或来源应用",
-                    "🏷️ Filename Leaks Date/Source App",
+                    "原文件名",
+                    "Original Filename",
                     r.originalFileName,
                     false));
         }

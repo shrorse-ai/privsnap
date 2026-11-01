@@ -341,17 +341,17 @@ public final class PixelScrubber {
         p.setColor(0xFF0F172A);
         p.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
         p.setTextSize(30f);
-        c.drawText(I18n.tr("📋 订单与私人收件信息 (涂抹下方敏感区)", "📋 Order & Private Delivery Info (Swipe to Blur)"), 76, 306, p);
+        c.drawText(I18n.tr("订单与收件信息", "Order & Delivery Details"), 76, 306, p);
 
         p.setColor(0xFFE2E8F0);
         c.drawLine(76, 334, w - 76, 334, p);
 
         String[][] rows = new String[][]{
-                {I18n.tr("收件地址", "Home Address"), I18n.tr("上海市浦东新区陆家嘴环路 580 号 B 座 1802 室", "Apt 1802, 580 Market St, San Francisco, CA")},
-                {I18n.tr("身份证 / 证件号", "ID / Passport No."), "310115199208164829"},
-                {I18n.tr("付款银行卡", "Payment Card"), "VISA •••• 8492 (Exp 08/29)"},
-                {I18n.tr("实付金额", "Total Paid"), "$1,280.00 / ¥9,200.00"},
-                {I18n.tr("订单编号", "Order Reference"), "ORD-20261031-994812"}
+                {I18n.tr("收件地址", "Address"), I18n.tr("上海市浦东新区陆家嘴环路 580 号 B 座 1802 室", "Apt 1802, 580 Market St, San Francisco, CA")},
+                {I18n.tr("证件号码", "Document No."), "310115199208164829"},
+                {I18n.tr("付款方式", "Payment Card"), "VISA •••• 8492 (Exp 08/29)"},
+                {I18n.tr("实付金额", "Amount"), "$1,280.00"},
+                {I18n.tr("订单编号", "Order ID"), "ORD-20261031-994812"}
         };
 
         int y = 392;
@@ -368,17 +368,17 @@ public final class PixelScrubber {
             y += 72;
         }
 
-        // Bottom GPS Warning card inside image
-        p.setColor(0xFFFEF2F2);
+        // Bottom note inside sample image
+        p.setColor(0xFFF8FAFC);
         c.drawRoundRect(new RectF(40, 770, w - 40, 950), 24, 24, p);
-        p.setColor(0xFFDC2626);
+        p.setColor(0xFF334155);
         p.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
-        p.setTextSize(26f);
-        c.drawText(I18n.tr("⚠️ 此示例照片文件头内嵌了真实 EXIF 与 GPS 定位：", "⚠️ This demo JPEG contains real binary EXIF & GPS:"), 72, 825, p);
+        p.setTextSize(25f);
+        c.drawText(I18n.tr("测试样张：内含 EXIF 与 GPS 坐标头信息", "Sample JPEG with embedded EXIF and GPS header"), 72, 825, p);
         p.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.NORMAL));
         p.setTextSize(23f);
-        c.drawText("GPS: 37.77493° N, 122.41942° W · Apple iPhone 16 Pro", 72, 868, p);
-        c.drawText(I18n.tr("手指直接在图片上滑动即可体验「毛玻璃打码」与「一键净图」！", "Swipe across any text above to apply Frosted Glass blur!"), 72, 910, p);
+        c.drawText("37.77493° N, 122.41942° W · Apple iPhone 16 Pro", 72, 868, p);
+        c.drawText(I18n.tr("可在图片上直接滑动涂抹或框选打码", "Drag across the image to blur or redact text"), 72, 910, p);
 
         ByteArrayOutputStream raw = new ByteArrayOutputStream(65536);
         bmp.compress(Bitmap.CompressFormat.JPEG, 92, raw);
